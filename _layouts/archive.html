@@ -1,0 +1,56 @@
+---
+layout: default
+---
+
+{% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
+  {% include page__hero.html %}
+{% elsif page.header.video.id and page.header.video.provider %}
+  {% include page__hero_video.html %}
+{% endif %}
+
+{% if page.url != "/" and site.breadcrumbs %}
+  {% unless paginator %}
+    {% include breadcrumbs.html %}
+  {% endunless %}
+{% endif %}
+
+
+<div class="main-image-wrap">
+  <div>
+    <h2>메가존클라우드의 <br><strong>Product Development Center</strong>입니다.</h2>
+    <p>국내 최초 & 최대 AWS 프리미어 컨설팅 파트너 메가존 클라우드의 <br/> 지식과 경험을 공유하며 함께 개발 문화를 성장시키는 것, 우리가 추구하는 가치입니다.</p>
+    <a href="">지원하러가기</a>
+  </div>
+  <!-- <img src="{{ site.url }}{{ site.baseurl }}/assets/images/bg-main.png"/> -->
+</div>
+
+<div class="content-wrapper">
+  <div id="main" role="main" class="content">
+    <section class="page__content">
+      <div class="archive">
+        {% unless page.header.overlay_color or page.header.overlay_image %}
+          <!-- <h1 id="page-title" class="page__title">{{ page.title }}</h1> -->
+        {% endunless %}
+        {{ content }}
+      </div>
+    </section>
+  </div>
+  <div class="aside">
+    <div class="item categories">
+      <h3>카테고리</h3>
+      <div class="list">
+        {% for category in site.categories %}
+          <a href="{{ category | first }}"><strong>AWS</strong><span>{{ category | last | size }}</span></a>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="item tags">
+      <h3>태그</h3>
+      <div class="list">
+        {% for tag in site.tags %}
+          <span class="tag"><a href="{{ tag | first }}">{{ tag | first }}</a></span>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>

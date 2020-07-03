@@ -1,0 +1,16 @@
+# Authors
+
+Martin Pwang:
+  name        : 퐝성운
+  bio         : Cloud Build Team<br/>Backend Developer
+  avatar      : /assets/images/avatar/martin.png
+  links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:hsw@mz.co.kr"
+    - label: "Website"
+      icon: "fas fa-fw fa-link"
+      url: "https://blog.exception.kr"
+    - label: "Instagram"
+      icon: "fab fa-fw fa-instagram"
+      url: "https://instagram.com/krexception"
